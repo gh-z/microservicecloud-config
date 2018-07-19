@@ -1,1 +1,46 @@
+spring.profiles.active: dev
+server:
+  port: 3355
+
+---
 name: a
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-client-dev
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: microservicecloud-config
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    register-with-eureka: false
+    service-url:
+       defaultZone: http://eureka:eureka123@eureka7001.com:7001/eureka/,http://eureka:eureka123@eureka7002.com:7002/eureka/,http://eureka:eureka123@eureka7003.com:7003/eureka/
+
+
+---
+name: a
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-client-test
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: microservicecloud-config
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    register-with-eureka: false
+    service-url:
+       defaultZone: http://eureka:eureka123@eureka7001.com:7001/eureka/,http://eureka:eureka123@eureka7002.com:7002/eureka/,http://eureka:eureka123@eureka7003.com:7003/eureka/
