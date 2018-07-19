@@ -1,9 +1,9 @@
 spring.profiles.active: dev
+server:
+  port: 8201
 
 ---
 name: dev
-server:
-  port: 8201
 spring:
   profiles: dev
   application:
@@ -15,8 +15,6 @@ eureka:
 
 ---
 name: test
-server:
-  port: 8202
 spring:
   profiles: test
   application:
