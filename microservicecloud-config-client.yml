@@ -6,7 +6,7 @@ name: a
 spring:
   profiles: dev
   application:
-    name: microservicecloud-client-dev
+    name: microservicecloud-client-devs
   cloud:
     config:
       label: master
