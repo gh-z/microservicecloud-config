@@ -1,8 +1,8 @@
-spring.profiles.active: test
+spring.profiles.active: dev
 server:
   port: 2233
 ---
-name: a
+name: a+
 spring:
   profiles: dev
   application:
